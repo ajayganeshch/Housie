@@ -670,7 +670,7 @@ let winnerArray_right = [...p1_part_2, ...p5, ...p7];
 // console.log("Winner Array Right:");
 // console.log(winnerArray_right);
 
-if ([...winnerArray_left] === [...winnerArray_right]) {
+if ([...winnerArray_left] == [...winnerArray_right]) {
   location.reload();
 }
 
