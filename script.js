@@ -1,6 +1,29 @@
 "use strict";
 // console.log(len);
 
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.innerWidth <= 1024 && window.innerHeight <= 768) {
+    document.querySelector("#continueButton").style.display = "none";
+    document.getElementById("desktopAlert").style.display = "block";
+    Array.from(document.body.children).forEach(function (child) {
+      if (child.id !== "desktopAlert") {
+        child.classList.add("blur");
+      }
+    });
+  } else {
+    document.getElementById("desktopAlert").style.display = "block";
+    document.querySelector("#alertMessage").textContent =
+      "This website was not optimized (not beautiful to see), Sorry for this.";
+    document.querySelector("#continueButton").classList.remove("hidden");
+    document
+      .querySelector("#continueButton")
+      .addEventListener("click", function () {
+        document.getElementById("desktopAlert").style.display = "none";
+        $("body > *").not("#desktopAlert").removeClass("blur");
+      });
+  }
+});
+
 buttonDis.removeAttribute("disabled");
 btnPlay.removeAttribute("disabled");
 
@@ -59,7 +82,7 @@ for (i = 0; i < len; i++) {
   // nlist.push(temp);
 }
 
-console.log(nlist);
+// console.log(nlist);
 // console.log([...new Set(nlist)]);
 
 // while (!nlist.includes(0)) {
@@ -334,6 +357,7 @@ let startButton = function () {
   document.querySelector(".inum").value = "";
   document.querySelector(".yn-js").classList.add("hidden");
   document.querySelector(".yno-js").classList.add("hidden");
+  document.querySelector(".s-p-u").classList.add("hidden");
   // console.log(p);
   if (p == 0) {
     document.querySelector(".btn--num").classList.remove("hidden");
@@ -447,7 +471,7 @@ for (i = 0; i < 20; i++) {
   // console.log(tarr)
 }
 
-console.log(replTemp);
+// console.log(replTemp);
 
 /*
 if 3 vertical rows are empyty then replace empyty by numbers
@@ -627,9 +651,9 @@ let final_part_arr_2 = divideParts(10, 19, last_arr_3);
 // console.log(final_part_arr_2);
 
 lacount_1 = checkequal(0, 9, [...last_arr_3]);
-console.log(lacount_1);
+// console.log(lacount_1);
 lacount_2 = checkequal(10, 19, [...last_arr_3]);
-console.log(lacount_2);
+// console.log(lacount_2);
 // console.log(last_arr_3);
 // console.log(last_arr_3);
 // need now
@@ -670,7 +694,7 @@ let winnerArray_right = [...p1_part_2, ...p5, ...p7];
 // console.log("Winner Array Right:");
 // console.log(winnerArray_right);
 
-if ([...winnerArray_left] === [...winnerArray_right]) {
+if ([...winnerArray_left] == [...winnerArray_right]) {
   location.reload();
 }
 
@@ -698,7 +722,7 @@ if (main_arr.includes(0)) {
 // while (!main_arr.includes(0)) {
 //   location.reload();
 // }
-console.log(main_arr);
+// console.log(main_arr);
 for (i = 0; i < 60; i++) {
   document.querySelector(`.arr${i}`).textContent = main_arr[i];
 }
