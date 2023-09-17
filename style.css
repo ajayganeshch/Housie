@@ -23,26 +23,26 @@ body {
   transform: translate(-50%, -50%);
   background-color: #fefefe;
   padding: 20px;
-  border-radius: 15px; /* Rounded corners */
+  border-radius: 15px;
   border: 1px solid #888;
   width: 80%;
   text-align: center;
 }
 
 #desktopAlertContent p {
-  font-size: 20px; /* Larger font size */
+  font-size: 20px;
 }
 
 #desktopAlertContent button {
-  background-color: #4caf50; /* Green background */
-  border: none; /* No border */
-  color: white; /* White text */
-  padding: 15px 32px; /* Padding */
-  text-align: center; /* Centered text */
-  text-decoration: none; /* No underline */
+  background-color: #4caf50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
   display: inline-block;
-  font-size: 16px; /* Larger font size */
-  margin-top: 20px; /* Space above the button */
+  font-size: 16px;
+  margin-top: 20px;
 }
 
 .blur {
@@ -71,7 +71,6 @@ body {
   justify-content: center;
 }
 
-/* LAYOUT */
 main {
   position: relative;
   width: 100rem;
@@ -89,7 +88,6 @@ main {
   background-color: rgba(255, 255, 255, 0.4);
 }
 
-/* ABSOLUTE POSITIONED ELEMENTS */
 .btn {
   position: absolute;
   left: 50%;
