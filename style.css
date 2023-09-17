@@ -1,5 +1,54 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
+body {
+  transition: filter 0.3s ease;
+}
+
+#desktopAlert {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#desktopAlertContent {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fefefe;
+  padding: 20px;
+  border-radius: 15px; /* Rounded corners */
+  border: 1px solid #888;
+  width: 80%;
+  text-align: center;
+}
+
+#desktopAlertContent p {
+  font-size: 20px; /* Larger font size */
+}
+
+#desktopAlertContent button {
+  background-color: #4caf50; /* Green background */
+  border: none; /* No border */
+  color: white; /* White text */
+  padding: 15px 32px; /* Padding */
+  text-align: center; /* Centered text */
+  text-decoration: none; /* No underline */
+  display: inline-block;
+  font-size: 16px; /* Larger font size */
+  margin-top: 20px; /* Space above the button */
+}
+
+.blur {
+  filter: blur(20px);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -602,6 +651,18 @@ td {
   color: #fff;
   text-align: center;
   animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
+      0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
+      0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
 }
 
 @-webkit-keyframes glow {
